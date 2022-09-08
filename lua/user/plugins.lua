@@ -60,8 +60,13 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
 
   -- Colorschemes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
+  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "savq/melange"
+  use "fcpg/vim-farout"
+  use "folke/tokyonight.nvim"
+  use "sainnhe/everforest"
+  use "EdenEast/nightfox.nvim"
+  -- use "lunarvim/darkplus.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -83,16 +88,21 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope-media-files.nvim"
 
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use 'nvim-treesitter/nvim-treesitter-context'
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+
+  --DAP 
+  use 'mfussenegger/nvim-dap'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
